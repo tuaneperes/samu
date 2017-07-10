@@ -24,19 +24,13 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
         this.ufs = this.ufService.getAll();
         this.dados_da_samu = this.samuService.getAllMunicipiosAtendidosPorEstado();
-        this.defineTitulo();
+        this.defineUF();
     }
 
-    defineTitulo(): void {
+    defineUF(): void {
       for(let uf of this.ufs){
         if (uf.id == 51) this.uf = uf;
       }
     }
-    idAreaUF(): void
-    {
-      for (let uf of this.ufs){
-        this.uf = String(uf.id)
-        this.uf = String (uf.area)
-      }
-    }
+
 }
