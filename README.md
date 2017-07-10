@@ -1,28 +1,48 @@
-# Samu
+# SAMU Avaliação prática de TII-POS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
+## Objetivo
 
-## Development server
+1. Mostrar no __cabeçalho__ qual a UF da sua avaliação (ver detalhe abaixo)
+2. Mostrar em __Detail__ o ID e área da UF, bem como a sua média de municípios atendidos
+3. Mostrar em __master__ o ano e quantidade de municípios atendidos da UF
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Procedimentos iniciais
 
-## Code scaffolding
+1. Usando o navegador, acessar o site https://github.com/leonardo-minora/samu
+2. Fazer um __uma cópia__ desse repositório, clicando no botão ```Fork```. Isso irá criar um repositório no seu **github** e manter o professor informado.
+3. No seu computador, fazer um ```git clone``` do seu repositório __forkado__
+4. A partir daí, use sempre ```git add```, ```git commit``` e ```git push```, como já vínhamos trabalhando nas aulas.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+__je vous souhaite à tous bonne chance__!!!
 
-## Build
+## Qual a sua UF?
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Os códigos (id) da Unidades Federativas (UF), segundo o IBGE, variam entre 11 e 53. Como mostrado do código-fonte ```src/app/service/mock-ufs.ts```.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- id: 11, aluno: Amanda Alves da Silva, Vinicius Albuquerque Malafaya
+- id: 12, aluno: Anderson Pereira Torres de Sá Neto, Wesley Giovane Oliveira da Cruz
+- id: 13, aluno: Carlos Romero Bacurau de Brito
+- id: 14, aluno: Clara Alice Bandeira de Moura
+- id: 15, aluno: Danilo Miranda de Medeiros Galvão
+- id: 16, aluno: Gabriel Cardoso Melita
+- id: 17, aluno: Isabelly Thayse Araujo Alves
+- id: 21, aluno: João Mendes Lopes Neto
+- id: 22, aluno: Jonathan Cardoso Ferreira de Moura
+- id: 23, aluno: Jorge Enrique de Azevedo Tinoco
+- id: 24, aluno: Jules Brendo Duarte Silva
+- id: 25, aluno: Julio Cesar Fernandes dos Santos
+- id: 26, aluno: Júlio Cesar Trindade de Azevedo
+- id: 27, aluno: Laís Pereira do Nascimento
+- id: 28, aluno: Lara Costa Belarmino de Macedo
+- id: 29, aluno: Leon Andrade Siqueira
+- id: 31, aluno: Marcos Adriano Rocha de Oliveira
+- id: 32, aluno: Nahédson Silva Batista de Souza
+- id: 33, aluno: Nestor Caetano dos Santos
+- id: 35, aluno: Paulo Victor Ribeiro de Freitas Damasceno
+- id: 41, aluno: Pedro Henrique de Macêdo Oliveira
+- id: 42, aluno: Rute da Silva Barbalho
+- id: 43, aluno: Sarah Rebecca Soares Penha
+- id: 50, aluno: Sara Silva de Medeiros
+- id: 51, aluno: Tuane Salviano Peres
+- id: 52, aluno: Vanessa Cristiane Santos
+- id: 53, aluno: Leonardo Ataide Minora
