@@ -17,6 +17,8 @@ export class AppComponent implements OnInit {
     ufs : UF[];
     dados_da_samu : Dados[];
     uf: UF;
+    municipios_atendidos: Dados[] = [];
+    media : number;
 
     constructor(private ufService: UFService, private samuService: SamuService)
     { }
@@ -25,12 +27,25 @@ export class AppComponent implements OnInit {
         this.ufs = this.ufService.getAll();
         this.dados_da_samu = this.samuService.getAllMunicipiosAtendidosPorEstado();
         this.defineUF();
+        this.media - this.calculoDeMedia();
     }
 
     defineUF(): void {
       for(let uf of this.ufs){
         if (uf.id == 51) this.uf = uf;
       }
+    }
+    calculoDeMedia() : number{
+      var qtd = 0;
+      var total = 0;
+      for (let mun of this.dados_da_samu){
+        if (mun.uf_id == 51){
+          qtd ++
+          total +=
+          this.municipios_atendidos.push(mun);
+        }
+      }
+      return Math.round (total/qtd);
     }
 
 }
