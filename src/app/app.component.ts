@@ -26,8 +26,9 @@ export class AppComponent implements OnInit {
     ngOnInit(): void {
         this.ufs = this.ufService.getAll();
         this.dados_da_samu = this.samuService.getAllMunicipiosAtendidosPorEstado();
-        this.defineUF();
-        this.media - this.calculoDeMedia();
+        this.uf = this.ufService.getPorID(51);
+        this.municipios_atendidos = this.samuService.getPorUFMunicipiosAtendidosPorEstado(this.uf)
+        this.media = this.calculoDeMedia();
     }
 
     defineUF(): void {
@@ -38,11 +39,10 @@ export class AppComponent implements OnInit {
     calculoDeMedia() : number{
       var qtd = 0;
       var total = 0;
-      for (let mun of this.dados_da_samu){
+      for (let mun of this.municipios_atendidos){
         if (mun.uf_id == 51){
           qtd ++
-          total +=
-          this.municipios_atendidos.push(mun);
+          total += mun.valor;
         }
       }
       return Math.round (total/qtd);
