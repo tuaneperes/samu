@@ -6,6 +6,9 @@ import {UFService} from './services/uf.service'
 import {Dados} from './types/samu';
 import {SamuService} from './services/samu.service'
 
+import {TodasUFsService} from './services/todasasufs'
+import {DadoNome} from './types/todasasufs'
+
 @Component({
   selector: 'app-root',
   templateUrl: './Todos_os_Dados.component.html',
@@ -18,12 +21,14 @@ export class Todos_os_DadosComponent implements OnInit {
     uf: UF;
     municipios_atendidos: Dados[] = [];
     media : number;
+    tudo: DadoNome[] = [];
 
-    constructor(private ufService: UFService, private samuService: SamuService)
+    constructor(private ufService: UFService, private samuService: SamuService, private TodasUFsService: TodasUFsService)
     { }
 
     ngOnInit(): void {
         this.ufs = this.ufService.getAll();
+        this.tudo = this.TodasUFsService.mesclardados();
         this.dados_da_samu = this.samuService.getAllMunicipiosAtendidosPorEstado();
         this.uf = this.ufService.getPorID(51);
         this.municipios_atendidos = this.samuService.getPorUFMunicipiosAtendidosPorEstado(this.uf)

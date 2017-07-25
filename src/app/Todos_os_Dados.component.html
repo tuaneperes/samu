@@ -8,7 +8,8 @@
   <h3>Municipios atendidos - média: {{media}}</h3>
 </div>
 <ul>
-  <li *ngFor = "let mun of municipios_atendidos">
+  <li *ngFor = "let mun of tudo">
       Ano: {{mun.ano}} Quantidade: {{mun.valor}}
+      Nome da uf: {{mun.uf.nome}}
   </li>
 </ul>

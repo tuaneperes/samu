@@ -11,6 +11,8 @@ import { RouterModule }   from '@angular/router';
 import {UFService} from './services/uf.service'
 import {SamuService} from './services/samu.service'
 
+import {TodasUFsService} from './services/todasasufs'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,13 +31,13 @@ import {SamuService} from './services/samu.service'
     path: 'dadosdauf',
     component: Dados_da_UFComponent
   },
-{
-path: 'todososdados',
-component: Todos_os_DadosComponent
-}
+  {
+    path: 'todososdados',
+    component: Todos_os_DadosComponent
+  }
     ])
   ],
-  providers: [SamuService, UFService],
+  providers: [SamuService, UFService, TodasUFsService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
